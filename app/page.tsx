@@ -50,10 +50,12 @@ export default function Home() {
       <div className="containerMax">
         {/*NavBar*/}
         <div className="nav">
-          <div className="logo" role="button" tabIndex={0}>
-            <Image src="/logo.png" alt="Logo" width={40} height={40} />
-            SayHalo
-          </div>
+          <a href="https://git.new/sayhalo" target="_blank" rel="noreferrer">
+            <div className="logo" role="button" tabIndex={0}>
+              <Image src="/logo.png" alt="Logo" width={40} height={40} />
+              SayHalo
+            </div>
+          </a>
           <div className="profile">
             <div className="button">
               <svg
