@@ -85,11 +85,18 @@ body {
   height: calc(100% - 60px);
   background-color: transparent;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   padding-top: 20px;
   flex-direction: column;
 }
 
+.mainContainer .responseContainer {
+  margin-top: -100px;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 .mainContainer .responseContainer .top {
   display: flex;
   padding-top: 20px;
@@ -98,7 +105,7 @@ body {
   position: relative;
   background-color: transparent;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -278,11 +285,34 @@ body {
     max-width: 70vw !important;
     min-width: 70vw !important;
   }
+  .mainContainer .responseContainer {
+    margin-top: -0;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mainContainer {
+    justify-content: start !important;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .mainContainer {
+    justify-content: start !important;
+  }
+
+  .responseContainer {
+    margin-top: 0 !important;
+  }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 560px) {
   .containerMax {
     max-height: 100svh;
+    align-items: center;
+    justify-content: center;
   }
   .textTop2 {
     width: 90vw !important;
@@ -311,7 +341,7 @@ body {
     max-width: 80vw;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   .mainContainer {
     padding-top: 80px !important;
   }
