@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Onest:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Onest", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.containerMax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #fde6f2;
+  background-image: radial-gradient(
+      at 27% 9%,
+      rgba(249, 214, 232, 0.1) 0%,
+      transparent 40%
+    ),
+    radial-gradient(at 21% 86%, rgba(225, 187, 217, 0.1) 0%, transparent 30%),
+    radial-gradient(at 97% 88%, rgba(200, 170, 205, 0.4) 0%, transparent 30%),
+    radial-gradient(at 20% 20%, rgba(158, 167, 204, 0.2) 0%, transparent 20%),
+    radial-gradient(at 90% 90%, rgba(158, 167, 204, 0.2) 0%, transparent 20%);
+}
+
+.containerMax .nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+}
+
+.nav .logo {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #464646;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 17px;
+  cursor: default;
+}
+
+.nav .profile {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  background-color: #cccccc50;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #cccccc80;
+    transform: translateY(-3px);
+  }
+}
+
+.containerMax .mainContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: transparent;
+  align-items: center;
+  justify-content: start;
+  padding-top: 20px;
+  flex-direction: column;
+}
+
+.mainContainer .responseContainer .top {
+  display: flex;
+  padding-top: 20px;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  background-color: transparent;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.top .logo {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+.top .textTop1 {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  font-size: 35px;
+  color: #9a9096;
+  font-weight: 500;
+  text-align: center;
+
+  line-height: 1em;
+}
+
+.top .textTop2 {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  font-size: 35px;
+  color: #464646;
+  text-align: center;
+  line-height: 1em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.top .textBottom {
+  display: flex;
+  position: relative;
+  width: 450px;
+  height: fit-content;
+  text-align: center;
+  font-size: 13px;
+  color: #9a9096;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+
+.inputContainer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.tabs {
+  display: flex;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  background-color: #cccccc50;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #cccccc80;
+    transform: translateY(-3px);
+  }
+}
+.inputContainer .inputBox {
+  width: fit-content;
+  display: flex;
+  height: fit-content;
+  position: relative;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inputBox .settings {
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 3px solid #faf7fa;
+  background-color: #464646;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #333;
+    animation: rotate 1s linear infinite;
+  }
+}
+
+.inputBox input {
+  width: 475px;
+  background-color: #faf7fa;
+  border: 1px solid transparent;
+  outline: none;
+  height: 50px;
+  color: #9a9096;
+  font-family: "Onest";
+  padding-left: 55px;
+  padding-right: 105px;
+  font-size: 14px;
+  border-radius: 100px;
+  &::placeholder {
+    color: #9a9096;
+  }
+}
+.inputBox .fileButton {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 428px;
+  margin: auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: #cccccc50;
+  align-items: center;
+  justify-content: center;
+  color: #464646;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #cccccc80;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.inputBox .buttonSubmit {
+  display: flex;
+  position: absolute;
+  right: 5px;
+  background-color: #f0946f;
+  padding-inline: 12px;
+  color: #faf7fa;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  gap: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e18662;
+  }
+  &:hover svg {
+    transform: rotate(-10deg);
+  }
+}
+@media (max-width: 560px) {
+  .inputBox input {
+    max-width: 70vw !important;
+    min-width: 70vw !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .containerMax {
+    max-height: 100svh;
+  }
+  .textTop2 {
+    width: 90vw !important;
+    flex-wrap: wrap;
+  }
+  .textTop1 {
+    width: 90vw !important;
+    flex-wrap: wrap;
+    text-align: center !important;
+    line-break: anywhere;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+  .textBottom {
+    width: 90vw !important;
+    flex-wrap: wrap;
+  }
+  input {
+    padding-right: 126px !important;
+  }
+  .inputBox .fileButton {
+    left: calc(100% - 68.7vw);
+  }
+  .textBottomGlobal {
+    max-width: 80vw;
+  }
+}
+@media (max-width: 430px) {
+  .mainContainer {
+    padding-top: 80px !important;
+  }
+
+  .inputBox .settings {
+    display: none !important;
+  }
+  .inputBox input {
+    max-width: 85vw !important;
+    min-width: 85vw !important;
+  }
+  .inputBox .fileButton {
+    left: calc(100% - 83.7vw);
+  }
+}
+.textBottomGlobal {
+  display: block; /* Change from flex to block for proper text wrapping */
+  position: absolute;
+  width: fit-content;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: fit-content;
+  text-align: center;
+  font-size: 11px;
+  white-space: pre-wrap; /* Fixes newlines + allows wrapping */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #9a9096;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
