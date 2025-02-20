@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // For smooth animations
+// import { motion } from "framer-motion";
 import Image from "next/image";
 import "./style.css";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
-  const [animate, setAnimate] = useState(false);
   const [messages, setMessages] = useState<{ user: string; ai: string }[]>([]);
   const [loading, setLoading] = useState(false); // For AI typing effect
   const [userName, setUserName] = useState("User");
@@ -21,6 +20,7 @@ export default function Home() {
     }
     if (name) {
       setUserName(name);
+      console.log(loading)
     }
   }, []);
 
@@ -91,7 +91,6 @@ export default function Home() {
   const handleSubmit = () => {
     if (!userInput.trim()) return;
 
-    setAnimate(true); // Trigger animations
     chatInit(userInput);
     setUserInput(""); // Clear input field after sending
 
@@ -165,7 +164,7 @@ export default function Home() {
               <div className="textTop2">Can I help you with anything?</div>
               <div className="textBottom">
                 Ready to assist you with anything you need, from answering
-                questions to providing recommendations. Let's get started
+                questions to providing recommendations. Let&apos;s get started
               </div>
             </div>
 
@@ -263,7 +262,7 @@ export default function Home() {
                       <path stroke="currentColor" d="M1.5 8h13" />
                     </svg>
                   </div>
-                  <div className="textBig">SayHalo AI: What's new?</div>
+                  <div className="textBig">SayHalo AI: What&apos;s new?</div>
                   <div className="textSmall">The deployment</div>
                 </div>
                 <div className="box">
